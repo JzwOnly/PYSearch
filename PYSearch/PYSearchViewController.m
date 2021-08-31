@@ -173,7 +173,7 @@
         [cancelButton sizeToFit];
         [cancelButton.titleLabel sizeToFit];
         self.cancelButtonWidth = cancelButton.py_width + cancelButtonLayoutMargins.left + cancelButtonLayoutMargins.right;
-        adaptWidth = self.cancelButtonWidth + 8;
+        adaptWidth += self.cancelButtonWidth + 8;
     } else { // Default is PYSearchViewControllerShowModeModal
         [cancelButton sizeToFit];
         [cancelButton.titleLabel sizeToFit];
@@ -203,7 +203,7 @@
             titleView.py_width = self.view.py_width - adaptWidth - PYSEARCH_MARGIN;
         } else if (self.searchViewControllerShowMode == PYSearchViewControllerShowModeCustomModal) {
             titleView.py_x = PYSEARCH_MARGIN * 1.5;
-            titleView.py_width = self.view.py_width - adaptWidth - PYSEARCH_MARGIN - self.cancelButtonWidth - titleView.py_x * 2 - 3;
+            titleView.py_width = self.view.py_width - adaptWidth - titleView.py_x * 2 - 3;
         } else {
             titleView.py_x = PYSEARCH_MARGIN * 1.5;
             titleView.py_width = self.view.py_width - self.cancelButtonWidth - titleView.py_x * 2 - 3;
