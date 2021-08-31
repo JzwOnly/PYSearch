@@ -51,7 +51,8 @@ typedef NS_ENUM(NSInteger, PYSearchResultShowMode) {
 typedef NS_ENUM(NSInteger, PYSearchViewControllerShowMode) {
     PYSearchViewControllerShowModeModal,    // modal, dispaly the view of searchViewController by modal
     PYSearchViewControllerShowModePush,   // push, dispaly the view of searchViewController by push
-    PYSearchViewControllerShowDefault = PYSearchViewControllerShowModeModal // defualt is `PYSearchViewControllerShowModeModal`
+    PYSearchViewControllerShowDefault = PYSearchViewControllerShowModeModal, // defualt is `PYSearchViewControllerShowModeModal`
+    PYSearchViewControllerShowModeCustomModal
 };
 
 
