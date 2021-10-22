@@ -263,7 +263,7 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
-    if(@available(iOS15.0, *)) {
+    if(@available(iOS 15.0, *)) {
         UINavigationBarAppearance *app = [UINavigationBarAppearance new];
         [app configureWithOpaqueAppearance];
         app.backgroundImage = [UIImage qmui_imageWithColor:UIColor.qd_tintColor size:CGSizeMake(4,4) cornerRadius:0];
