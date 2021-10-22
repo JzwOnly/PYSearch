@@ -261,18 +261,10 @@
         self.navigationController.interactivePopGestureRecognizer.delegate = _previousInteractivePopGestureRecognizerDelegate;
     }
 }
-// - (void)viewDidLoad{
-//     [super viewDidLoad];
-//     if(@available(iOS 15.0, *)) {
-//         UINavigationBarAppearance *app = [UINavigationBarAppearance new];
-//         [app configureWithOpaqueBackground];
-//         app.backgroundImage = [UIImage qmui_imageWithColor:UIColor.qd_tintColor size:CGSizeMake(4,4) cornerRadius:0];
-//         app.shadowImage = nil;
-//         app.shadowColor = UIColor.clearColor;
-//         self.navigationController.navigationBar.scrollEdgeAppearance = app;
-//         self.navigationController.navigationBar.standardAppearance = app;
-//     }
-// }
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    if (self.viewDidLoadBlock) self.viewDidLoadBlock(self);
+}
 
 - (void)dealloc
 {
