@@ -10,6 +10,7 @@
 @class PYSearchViewController, PYSearchSuggestionViewController;
 
 typedef void(^PYDidSearchBlock)(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText);
+typedef void(^PYViewDidLoad)(PYSearchViewController *searchViewController);
 
 /**
  style of popular search
@@ -368,6 +369,11 @@ didSelectSearchSuggestionAtIndex:(NSInteger)index
  The block which invoked when search begain.
  */
 @property (nonatomic, copy) PYDidSearchBlock didSearchBlock;
+
+/**
+ The block which invoked when viewDidLoad.
+ */
+@property (nonatomic, copy) PYViewDidLoad viewDidLoadBlock;
 
 /**
  The element of search suggestions
